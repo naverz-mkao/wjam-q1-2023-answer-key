@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 31164885f057b924b93a1f1b16c287c7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst SoundManager_1 = require(\"./SoundManager\");\r\nclass
+    CollectScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n    }\r\n    OnTriggerEnter(other) {\r\n        //CODE: Use Debug.Log to
+    log \"Collect Coin\" to the console when another game object with a collider
+    enters the trigger that is on this game object\r\n        console.log(\"Collided\");\r\n       
+    //CODE: Call the PlayCoinCollectSoundInSoundManager function that''s in this
+    CollectScript class\r\n        this.PlayCoinCollectSoundInSoundManager();\r\n       
+    //CODE: Call the Destroy function inside the GameObject class to destroy the
+    coin game object that this CollectScript is attached t\r\n        UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n   
+    }\r\n    PlayCoinCollectSoundInSoundManager() {\r\n        //CODE: Find game
+    object named SoundManager using GameObject.Find,\r\n        //      then get
+    the SoundManager component that is on the SoundManager game object,\r\n       
+    //      and lastly call the PlayCoinCollectSound function that exist in the SoundManager
+    class\r\n        UnityEngine_1.GameObject.Find(\"SoundManager\").GetComponent($typeof(SoundManager_1.default)).PlayCoinCollectSound();\r\n   
+    }\r\n}\r\nexports.default = CollectScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29sbGVjdFNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbGxlY3RTY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBZ0Y7QUFDaEYsaURBQXFEO0FBQ3JELGlEQUEwQztBQUUxQyxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBRTVELEtBQUs7SUFFTCxDQUFDO0lBRUQsY0FBYyxDQUFDLEtBQWU7UUFDMUIsa0pBQWtKO1FBQ2xKLE9BQU8sQ0FBQyxHQUFHLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDeEIsK0ZBQStGO1FBQy9GLElBQUksQ0FBQyxrQ0FBa0MsRUFBRSxDQUFDO1FBQzFDLG1JQUFtSTtRQUNuSSx3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7SUFDeEMsQ0FBQztJQUVELGtDQUFrQztRQUM5QixrRUFBa0U7UUFDbEUsb0ZBQW9GO1FBQ3BGLDhGQUE4RjtRQUM5Rix3QkFBVSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQyxZQUFZLFNBQUMsc0JBQVksR0FBSSxvQkFBb0IsRUFBRSxDQUFDO0lBQ3hGLENBQUM7Q0FDSjtBQXJCRCxnQ0FxQkMifQ==","assetPath":"Assets/Scripts/CollectScript.ts","manifest":{"properties":[],"name":"CollectScript","description":""},"isCompiled":true}'
+  typescriptHash: 0b2cf3bcc637da39eafdb099d35dbca0
+  onlyWriteTrigger: 0

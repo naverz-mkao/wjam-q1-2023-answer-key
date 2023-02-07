@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: dd636de6d93a2e6488ec56485cde3949
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SpinScript extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n    }\r\n    Update() {\r\n        //Code: Access the Transform
+    component that exist on the game object that this SpinScript is attached to\r\n       
+    //      Call the Rotate function that exist in the Transform class to rotate
+    the game object\r\n        //      Note that the Rotate function takes a Vector3
+    as its first parameter\r\n        //      Pass in xSpeed, ySpeed, zSpeed variables
+    to create your Vector3\r\n        this.transform.Rotate(new UnityEngine_1.Vector3(this.xSpeed,
+    this.ySpeed, this.zSpeed * UnityEngine_1.Time.deltaTime));\r\n    }\r\n}\r\nexports.default
+    = SpinScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3BpblNjcmlwdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwaW5TY3JpcHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBc0U7QUFDdEUsaURBQXFEO0FBRXJELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFRekQsS0FBSztJQUNMLENBQUM7SUFFRCxNQUFNO1FBQ04sd0dBQXdHO1FBQ3hHLDRGQUE0RjtRQUM1Riw0RUFBNEU7UUFDNUUsdUVBQXVFO1FBQ25FLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLElBQUkscUJBQU8sQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFDLElBQUksQ0FBQyxNQUFNLEVBQUMsSUFBSSxDQUFDLE1BQU0sR0FBRyxrQkFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7SUFDN0YsQ0FBQztDQUNKO0FBbEJELDZCQWtCQyJ9","assetPath":"Assets/Scripts/SpinScript.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"xSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"ySpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"zSpeed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpinScript","description":""},"isCompiled":true}'
+  typescriptHash: fc3aff73dc912212e99bbe230eea4382
+  onlyWriteTrigger: 0
