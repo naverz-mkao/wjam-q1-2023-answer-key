@@ -1,0 +1,8 @@
+{
+"State" : {"players" : {"map" : "Player"},"virusId" : "string","gameTimer" : "Timer"},
+"Vector3Schema" : {"x" : "number","y" : "number","z" : "number"},
+"Player" : {"userId" : "string","characterState" : "number","position" : "Vector3Schema","sessionId" : "string","team" : "Team","spawnIndex" : "number"},
+"Team" : {"teamId" : "number"},
+"GameState" : {"stateId" : "number"},
+"Timer" : {"value" : "number"}
+}

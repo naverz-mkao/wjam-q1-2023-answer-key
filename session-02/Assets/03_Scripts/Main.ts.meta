@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: d2f42b0712962bf488b0a2fe75fadfa0
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst CharacterController_1 = require(\"./Character/CharacterController\");\r\nconst
+    GameManager_1 = require(\"./Game Management/GameManager\");\r\nconst UIManager_1
+    = require(\"./UI/UIManager\");\r\nconst ClientScript_1 = require(\"./Game Management/Multiplay/ClientScript\");\r\nclass
+    Main extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this.hasEnteredLobby = false;\r\n    }\r\n   
+    static GetInstance() {\r\n        let gameObject = UnityEngine_1.GameObject.Find(\"Main\");\r\n       
+    if (UnityEngine_1.GameObject.op_Inequality(gameObject, null))\r\n           
+    return gameObject.GetComponent($typeof(Main));\r\n        else\r\n           
+    return new Main();\r\n    }\r\n    Awake() {\r\n        Main.instance = this;\r\n       
+    this.gameMgr = this.GetComponentInChildren($typeof(GameManager_1.default));\r\n       
+    this.uiMgr = this.GetComponentInChildren($typeof(UIManager_1.default));\r\n       
+    this.client = this.GetComponentInChildren($typeof(ClientScript_1.default));\r\n   
+    }\r\n    Start() {\r\n        this.InitializeAll();\r\n    }\r\n    InitializeAll()
+    {\r\n        this.client?.Init();\r\n        this.gameMgr?.Init();\r\n    }\r\n   
+    GetSpawnTransform(spawnIndex) {\r\n        return this.gameMgr?.GetSpawnTransform(spawnIndex);\r\n   
+    }\r\n}\r\nexports.default = Main;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1haW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkNBQW9EO0FBQ3BELHlFQUFrRTtBQUNsRSwrREFBd0Q7QUFDeEQsOENBQXVDO0FBRXZDLDJFQUFvRTtBQUVwRSxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBQXZEOztRQVFXLG9CQUFlLEdBQWEsS0FBSyxDQUFDO0lBbUM3QyxDQUFDO0lBaENVLE1BQU0sQ0FBQyxXQUFXO1FBRXJCLElBQUksVUFBVSxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQ3pDLElBckJDLHdCQUFVLENBbUQya1QsYUFBYyxDQTlCaG1ULFVBQVUsRUFBSSxJQUFJO1lBQ2xCLE9BQU8sVUFBVSxDQUFDLFlBQVksU0FBQyxJQUFJLEdBQUk7O1lBRXZDLE9BQU8sSUFBSSxJQUFJLEVBQUUsQ0FBQztJQUMxQixDQUFDO0lBRU0sS0FBSztRQUVSLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO1FBQ3JCLElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDLHNCQUFzQixTQUFDLHFCQUFXLEVBQUcsQ0FBQztRQUMxRCxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxzQkFBc0IsU0FBQyxtQkFBUyxFQUFHLENBQUM7UUFDdEQsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUMsc0JBQXNCLFNBQUMsc0JBQVksRUFBRyxDQUFDO0lBQzlELENBQUM7SUFFTSxLQUFLO1FBRVIsSUFBSSxDQUFDLGFBQWEsRUFBRSxDQUFDO0lBQ3pCLENBQUM7SUFFTSxhQUFhO1FBRWhCLElBQUksQ0FBQyxNQUFNLEVBQUUsSUFBSSxFQUFFLENBQUM7UUFDcEIsSUFBSSxDQUFDLE9BQU8sRUFBRSxJQUFJLEVBQUUsQ0FBQztJQUN6QixDQUFDO0lBRU0saUJBQWlCLENBQUMsVUFBa0I7UUFFdkMsT0FBTyxJQUFJLENBQUMsT0FBTyxFQUFFLGlCQUFpQixDQUFDLFVBQVUsQ0FBQyxDQUFDO0lBQ3ZELENBQUM7Q0FDSjtBQTNDRCx1QkEyQ0MifQ==","assetPath":"Assets/03_Scripts/Main.ts","manifest":{"properties":[{"assembly":"","name":"characterController","type":"C:/Users/leehy/Documents/NaverZ/ZEPETO/Projects/InternalProjects/WorldJam/WJam_Q1_2023_Codealong/session-02/Assets/03_Scripts/Character/CharacterController.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"gameMgr","type":"C:/Users/leehy/Documents/NaverZ/ZEPETO/Projects/InternalProjects/WorldJam/WJam_Q1_2023_Codealong/session-02/Assets/03_Scripts/Game
+    Management/GameManager.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"uiMgr","type":"C:/Users/leehy/Documents/NaverZ/ZEPETO/Projects/InternalProjects/WorldJam/WJam_Q1_2023_Codealong/session-02/Assets/03_Scripts/UI/UIManager.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"client","type":"C:/Users/leehy/Documents/NaverZ/ZEPETO/Projects/InternalProjects/WorldJam/WJam_Q1_2023_Codealong/session-02/Assets/03_Scripts/Game
+    Management/Multiplay/ClientScript.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"hasEnteredLobby","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Main","description":""},"isCompiled":true}'
+  typescriptHash: e5ef478e31da91d2198c13649cfc9110
+  onlyWriteTrigger: 0

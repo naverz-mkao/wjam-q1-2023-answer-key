@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: f3596bf739f1fdd46978834b9acb28b8
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameManager_1 = require(\"../Game
+    Management/GameManager\");\r\nconst ClientScript_1 = require(\"../Game Management/Multiplay/ClientScript\");\r\nconst
+    Main_1 = require(\"../Main\");\r\nconst UICharacterController_1 = require(\"./UICharacterController\");\r\nclass
+    UIManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Init() {\r\n   
+    }\r\n    InitUI(uicontroller) {\r\n        this.uicontroller = uicontroller;\r\n       
+    this.SetUIState(ClientScript_1.GameState.Wait);\r\n    }\r\n    SetUIState(state)
+    {\r\n        console.log(\"Setting State: \" + state);\r\n        if (state ==
+    ClientScript_1.GameState.Wait) {\r\n            this.titleUI.SetActive(true);\r\n           
+    this.titleFX.SetActive(true);\r\n        }\r\n        else if (state == ClientScript_1.GameState.GameReady)
+    {\r\n            this.titleUI.SetActive(false);\r\n            this.titleFX.SetActive(false);\r\n       
+    }\r\n        else if (state == ClientScript_1.GameState.GameStart) {\r\n           
+    this.titleUI.SetActive(false);\r\n            this.titleFX.SetActive(false);\r\n       
+    }\r\n        else if (state == ClientScript_1.GameState.GameFinish) {\r\n           
+    this.titleUI.SetActive(false);\r\n            this.titleFX.SetActive(false);\r\n       
+    }\r\n    }\r\n    UpdateMeetingTimer(timer) {\r\n        this.timerText.text
+    = Math.max(0, timer).toString();\r\n    }\r\n    SetTeam(team) {\r\n        if
+    (team == GameManager_1.PlayerTeam.VIRUS) {\r\n            this.UpdateUIConsole(\"You
+    are the Virus. Go destroy the system!\");\r\n        }\r\n        else if (team
+    == GameManager_1.PlayerTeam.SURVIVOR) {\r\n            this.UpdateUIConsole(\"You
+    are not the virus. Find the Virus and save zepeto!\");\r\n        }\r\n       
+    else if (team == GameManager_1.PlayerTeam.GHOST) {\r\n            this.UpdateUIConsole(\"You
+    died... You can still help though, by completing missions!\");\r\n        }\r\n   
+    }\r\n    UpdateUIConsole(message) {\r\n        this.messageText.text = message;\r\n   
+    }\r\n}\r\nexports.default = UIManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsNkNBQWlEO0FBQ2pELGlEQUFxRDtBQUNyRCxnRUFBNEQ7QUFDNUQsNEVBQXNFO0FBQ3RFLGtDQUEyQjtBQUMzQixtRUFBNEQ7QUFFNUQsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQU9qRCxJQUFJO0lBR1gsQ0FBQztJQUVNLE1BQU0sQ0FBQyxZQUFtQztRQUU3QyxJQUFJLENBQUMsWUFBWSxHQUFHLFlBQVksQ0FBQztRQUNqQyxJQUFJLENBQUMsVUFBVSxDQUFDLHdCQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDcEMsQ0FBQztJQUVNLFVBQVUsQ0FBQyxLQUFnQjtRQUU5QixPQUFPLENBQUMsR0FBRyxDQUFDLGlCQUFpQixHQUFHLEtBQUssQ0FBQyxDQUFDO1FBQ3ZDLElBQUksS0FBSyxJQUFJLHdCQUFTLENBQUMsSUFBSSxFQUMzQjtZQUNJLElBQUksQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQzdCLElBQUksQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ2hDO2FBQ0ksSUFBSSxLQUFLLElBQUksd0JBQVMsQ0FBQyxTQUFTLEVBQ3JDO1lBQ0ksSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDOUIsSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDakM7YUFDSSxJQUFJLEtBQUssSUFBSSx3QkFBUyxDQUFDLFNBQVMsRUFDckM7WUFDSSxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztZQUM5QixJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztTQUNqQzthQUNJLElBQUksS0FBSyxJQUFJLHdCQUFTLENBQUMsVUFBVSxFQUN0QztZQUNJLElBQUksQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQzlCLElBQUksQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQ2pDO0lBQ0wsQ0FBQztJQUVELGtCQUFrQixDQUFDLEtBQWE7UUFFNUIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDLEVBQUMsS0FBSyxDQUFDLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDdkQsQ0FBQztJQUVNLE9BQU8sQ0FBQyxJQUFnQjtRQUUzQixJQUFJLElBQUksSUFBSSx3QkFBVSxDQUFDLEtBQUssRUFDNUI7WUFDSSxJQUFJLENBQUMsZUFBZSxDQUFDLDJDQUEyQyxDQUFDLENBQUM7U0FDckU7YUFDSSxJQUFJLElBQUksSUFBSSx3QkFBVSxDQUFDLFFBQVEsRUFDcEM7WUFDSSxJQUFJLENBQUMsZUFBZSxDQUFDLHdEQUF3RCxDQUFDLENBQUM7U0FDbEY7YUFDSSxJQUFJLElBQUksSUFBSSx3QkFBVSxDQUFDLEtBQUssRUFDakM7WUFDSSxJQUFJLENBQUMsZUFBZSxDQUFDLGdFQUFnRSxDQUFDLENBQUM7U0FDMUY7SUFDTCxDQUFDO0lBRU0sZUFBZSxDQUFDLE9BQWU7UUFFbEMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEdBQUcsT0FBTyxDQUFDO0lBQ3BDLENBQUM7Q0FDSjtBQXBFRCw0QkFvRUMifQ==","assetPath":"Assets/03_Scripts/UI/UIManager.ts","manifest":{"properties":[{"assembly":"","name":"uicontroller","type":"C:/Users/leehy/Documents/NaverZ/ZEPETO/Projects/InternalProjects/WorldJam/WJam_Q1_2023_Codealong/session-03/Assets/03_Scripts/UI/UICharacterController.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"Unity.TextMeshPro","name":"messageText","type":"TMPro.TextMeshProUGUI","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"Unity.TextMeshPro","name":"timerText","type":"TMPro.TextMeshProUGUI","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"titleUI","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"titleFX","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIManager","description":""},"isCompiled":true}'
+  typescriptHash: 5d5de0cda3d83b24ab0b403706b7af23
+  onlyWriteTrigger: 0

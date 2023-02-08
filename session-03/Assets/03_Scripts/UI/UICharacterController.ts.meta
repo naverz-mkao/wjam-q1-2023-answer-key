@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 22858a3379648aa4a97784e0f5bfb9ec
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst GameManager_1 = require(\"../Game
+    Management/GameManager\");\r\nconst Main_1 = require(\"../Main\");\r\nclass UICharacterController
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.killButton.gameObject.SetActive(false);\r\n       
+    this.killButton.onClick.AddListener(() => { Main_1.default.instance.characterController.Kill();
+    });\r\n    }\r\n    SetTeam(team) {\r\n        switch (team) {\r\n           
+    case GameManager_1.PlayerTeam.VIRUS:\r\n                this.killButton.gameObject.SetActive(true);\r\n               
+    this.EnableKill(false);\r\n                break;\r\n            case GameManager_1.PlayerTeam.SURVIVOR:\r\n               
+    this.killButton.gameObject.SetActive(false);\r\n                break;\r\n           
+    case GameManager_1.PlayerTeam.GHOST:\r\n                this.killButton.gameObject.SetActive(false);\r\n               
+    break;\r\n        }\r\n    }\r\n    EnableKill(b) {\r\n        this.killButton.interactable
+    = b;\r\n    }\r\n}\r\nexports.default = UICharacterController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlDaGFyYWN0ZXJDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlDaGFyYWN0ZXJDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBQ3JELDZDQUFnRDtBQUNoRCxnRUFBNEQ7QUFFNUQsa0NBQTJCO0FBRTNCLE1BQXFCLHFCQUFzQixTQUFRLHFDQUFxQjtJQUc3RCxLQUFLO1FBRVIsSUFBSSxDQUFDLFVBQVUsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQzVDLElBQUksQ0FBQyxVQUFVLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUUsR0FBRyxjQUFJLENBQUMsUUFBUSxDQUFDLG1CQUFtQixDQUFDLElBQUksRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDN0YsQ0FBQztJQUVNLE9BQU8sQ0FBQyxJQUFnQjtRQUUzQixRQUFRLElBQUksRUFDWjtZQUNJLEtBQUssd0JBQVUsQ0FBQyxLQUFLO2dCQUNqQixJQUFJLENBQUMsVUFBVSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBRTNDLElBQUksQ0FBQyxVQUFVLENBQUMsS0FBSyxDQUFDLENBQUM7Z0JBQ3ZCLE1BQU07WUFDVixLQUFLLHdCQUFVLENBQUMsUUFBUTtnQkFDcEIsSUFBSSxDQUFDLFVBQVUsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO2dCQUM1QyxNQUFNO1lBQ1YsS0FBSyx3QkFBVSxDQUFDLEtBQUs7Z0JBQ2pCLElBQUksQ0FBQyxVQUFVLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztnQkFDNUMsTUFBTTtTQUNiO0lBQ0wsQ0FBQztJQUNNLFVBQVUsQ0FBQyxDQUFPO1FBRXJCLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxHQUFHLENBQUMsQ0FBQztJQUNyQyxDQUFDO0NBQ0o7QUE5QkQsd0NBOEJDIn0=","assetPath":"Assets/03_Scripts/UI/UICharacterController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"killButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UICharacterController","description":""},"isCompiled":true}'
+  typescriptHash: 2e2fee83a3b782d0873108fa2665e937
+  onlyWriteTrigger: 0
